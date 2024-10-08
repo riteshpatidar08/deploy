@@ -30,6 +30,9 @@ app.use(express.json());
 
 dbConnect() ;
 
+app.get('/',(req,res)=>{
+  res.status(200).send('home page')
+})
 
 app.use('/api',require('./routes/userRoutes'))
 app.use('/api', require('./routes/productRoutes'))
